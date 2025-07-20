@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/smyark-react/static/css/main.b83f8802.css",
-    "main.js": "/smyark-react/static/js/main.526b2639.js",
+    "main.js": "/smyark-react/static/js/main.efb3603c.js",
     "static/js/453.bebd0a1e.chunk.js": "/smyark-react/static/js/453.bebd0a1e.chunk.js",
     "index.html": "/smyark-react/index.html",
     "main.b83f8802.css.map": "/smyark-react/static/css/main.b83f8802.css.map",
-    "main.526b2639.js.map": "/smyark-react/static/js/main.526b2639.js.map",
+    "main.efb3603c.js.map": "/smyark-react/static/js/main.efb3603c.js.map",
     "453.bebd0a1e.chunk.js.map": "/smyark-react/static/js/453.bebd0a1e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b83f8802.css",
-    "static/js/main.526b2639.js"
+    "static/js/main.efb3603c.js"
   ]
 }
