@@ -234,23 +234,23 @@ const Resume = ({ audioRef }) => {
             <h3>Контакты</h3>
             <div className="contacts-grid">
               <div className="contact-item contact-joker" onClick={() => window.open('https://github.com/Kakanom', '_blank')}>
-                <div className="joker-bg" style={{ backgroundImage: 'url(/images/balatro/custom_joker/github_joker.png)' }}></div>
+                <div className="joker-bg" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/balatro/custom_joker/github_joker.png)` }}></div>
                 <span className="contact-name">GitHub</span>
               </div>
               <div className="contact-item contact-joker" onClick={() => window.open('https://t.me/Smyark1', '_blank')}>
-                <div className="joker-bg" style={{ backgroundImage: 'url(/images/balatro/custom_joker/telegram_joker.png)' }}></div>
+                <div className="joker-bg" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/balatro/custom_joker/telegram_joker.png)` }}></div>
                 <span className="contact-name">Telegram</span>
               </div>
               <div className="contact-item contact-joker" onClick={() => window.open('https://vk.com/smyark', '_blank')}>
-                <div className="joker-bg" style={{ backgroundImage: 'url(/images/balatro/custom_joker/vk_joker.png)' }}></div>
+                <div className="joker-bg" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/balatro/custom_joker/vk_joker.png)` }}></div>
                 <span className="contact-name">VKontakte</span>
               </div>
               <div className="contact-item contact-joker" onClick={() => window.open('https://steamcommunity.com/profiles/76561198273888794/', '_blank')}>
-                <div className="joker-bg" style={{ backgroundImage: 'url(/images/balatro/custom_joker/steam_joker.png)' }}></div>
+                <div className="joker-bg" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/balatro/custom_joker/steam_joker.png)` }}></div>
                 <span className="contact-name">Steam</span>
               </div>
               <div className="contact-item contact-joker" onClick={() => window.open('https://discord.gg/your-discord', '_blank')}>
-                <div className="joker-bg" style={{ backgroundImage: 'url(/images/balatro/custom_joker/discord_joker.png)' }}></div>
+                <div className="joker-bg" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/balatro/custom_joker/discord_joker.png)` }}></div>
                 <span className="contact-name">Discord</span>
               </div>
             </div>
@@ -325,7 +325,7 @@ const Resume = ({ audioRef }) => {
       <div className="resume-avatar">
         <div className="centered">
           <img 
-            src="/images/giga_me.png" 
+            src={`${process.env.PUBLIC_URL}/images/giga_me.png`} 
             alt="Аватар" 
             className="avatar-image" 
           />
@@ -390,7 +390,7 @@ const Resume = ({ audioRef }) => {
                 className={`tab-button ${activeSection === section ? 'active' : ''}`}
                 onClick={() => setActiveSection(section)}
                 style={{
-                  backgroundImage: `url(/images/balatro/${data.joker})`,
+                  backgroundImage: `url(${process.env.PUBLIC_URL}/images/balatro/${data.joker})`,
                   backgroundSize: 'contain',
                   backgroundPosition: 'center',
                   backgroundRepeat: 'no-repeat'

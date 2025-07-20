@@ -4,28 +4,7 @@ const AudioElements = forwardRef((props, ref) => {
   const [honkCounter, setHonkCounter] = useState(0);
   const [showScreamer, setShowScreamer] = useState(false);
   const [screamerStage, setScreamerStage] = useState(0);
-  const [audioInitialized, setAudioInitialized] = useState(false);
 
-  // Initialize audio on first user interaction
-  const initializeAudio = () => {
-    if (!audioInitialized) {
-      const audioElements = ['honk', 'screamer', 'tension'];
-      audioElements.forEach(id => {
-        const audio = document.getElementById(id);
-        if (audio) {
-          audio.load(); // Reload to ensure it's ready
-          // Try to play and immediately pause to "prime" the audio
-          audio.play().then(() => {
-            audio.pause();
-            audio.currentTime = 0;
-          }).catch(() => {
-            // Silent fail - browser prevented autoplay
-          });
-        }
-      });
-      setAudioInitialized(true);
-    }
-  };
 
   const playAudioSafely = async (audioElement) => {
     try {
@@ -137,15 +116,15 @@ const AudioElements = forwardRef((props, ref) => {
   return (
     <>
       <audio id="honk" preload="auto">
-        <source src="/sounds/honk.mp3" type="audio/mpeg" />
+        <source src={`${process.env.PUBLIC_URL}/sounds/honk.mp3`} type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
       <audio id="screamer" preload="auto">
-        <source src="/sounds/screamer.mp3" type="audio/mpeg" />
+        <source src={`${process.env.PUBLIC_URL}/sounds/screamer.mp3`} type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
       <audio id="tension" preload="auto" loop>
-        <source src="/sounds/tension.mp3" type="audio/mpeg" />
+        <source src={`${process.env.PUBLIC_URL}/sounds/tension.mp3`} type="audio/mpeg" />
         <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav" />
         Your browser does not support the audio element.
       </audio>
